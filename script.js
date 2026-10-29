@@ -43,6 +43,7 @@ const PRODUCTS = [
  {
    id: 4,
    name: "OrbitFit Smartwatch, AMOLED, Heart Rate",
+   cat: "Electronics",
    price: 2299,
    mrp: 5999,
    rating: 4.1,
@@ -54,6 +55,7 @@ const PRODUCTS = [
  {
    id: 5,
    name: "ClickMaster Wireless Mouse, Silent Click",
+   cat: "Electronics",
    price: 499,
    mrp: 599,
    rating: 4.0,
@@ -65,6 +67,7 @@ const PRODUCTS = [
  {
    id: 6,
    name: "StreamCast 43\" 4K Smart TV, HDR10",
+   cat: "Electronics",
    price: 22999,
    mrp: 34999,
    rating: 4.1,
@@ -76,6 +79,7 @@ const PRODUCTS = [
  {
    id: 7,
    name: "Men's UrbanFit Running Sneakers, Breathable",
+   cat: "Fashion",
    price: 1299,
    mrp: 2999,
    rating: 4.2,
@@ -87,6 +91,7 @@ const PRODUCTS = [
  {
    id: 8,
    name: "Women's Floral Wrap Dress, Cotton Blend",
+   cat: "Fashion",
    price: 899,
    mrp: 1999,
    rating: 4.0,
@@ -98,6 +103,7 @@ const PRODUCTS = [
  {  
    id: 9,
    name: "Classic Denim Jacket, Unisex Fit",
+   cat: "Fashion",
    price: 1599,
    mrp: 2799,
    rating: 4.3,
@@ -109,6 +115,7 @@ const PRODUCTS = [
   {  
    id: 10,
    name: "AviatorX Polarized Sunglasses, UV400",
+   cat: "Fashion",
    price: 699,
    mrp: 1499,
    rating: 4.1,
@@ -120,6 +127,7 @@ const PRODUCTS = [
   {  
    id: 11,
    name: "Everyday Leather Wallet, RFID Blocking",
+   cat: "Fashion",
    price: 499,
    mrp: 999,
    rating: 3.9,
@@ -131,6 +139,7 @@ const PRODUCTS = [
   {  
    id: 12,
    name: "TurboChef 750W Mixer Grinder, 3 Jars",
+   cat: "home,electronics",
    price: 2199,
    mrp: 3999,
    rating: 4.4,
@@ -142,6 +151,7 @@ const PRODUCTS = [
   {  
    id: 13,
    name: "NonStick Cookware Set, 5 Pieces",
+   cat: "home,electronics",
    price: 1699,
    mrp: 3999,
    rating: 4.2,
@@ -153,6 +163,7 @@ const PRODUCTS = [
   {  
    id: 14,
    name: "CloudSoft Memory Foam Pillow, Set of 2",
+    cat: "home",
    price: 799,
    mrp: 1599,
    rating: 4.0,
@@ -164,6 +175,7 @@ const PRODUCTS = [
   {  
    id: 15,
    name: "BrightGlow LED Study Lamp, Touch Control",
+   cat: "home",
    price: 599,
    mrp: 1199,
    rating: 4.1,
@@ -175,6 +187,7 @@ const PRODUCTS = [
   {  
    id: 16,
    name: "GlowSkin Vitamin C Face Serum, 30ml",
+   cat: "fashion,beauty",
    price: 399,
    mrp: 899,
    rating: 4.3,
@@ -186,6 +199,7 @@ const PRODUCTS = [
   {  
    id: 17,
    name: "SilkTress Argan Hair Oil, 200ml",
+   cat: "fashion,beauty",
    price: 299,
    mrp: 599,
    rating: 4.0,
@@ -197,6 +211,7 @@ const PRODUCTS = [
   {  
    id: 18,
    name: "MatteMuse Lipstick Combo, Pack of 3",
+   cat: "fashion,beauty",
    price: 449,
    mrp: 999,
    rating: 4.2,
