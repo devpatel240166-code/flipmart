@@ -1,0 +1,113 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlipMart Mini — Shop Smart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="top-inner">
+    <a class="logo" href="#" onclick="return false;">FlipMart<span>Mini ⚡ Plus</span></a>
+    <div class="search">
+      <input id="searchInput" type="text" placeholder="Search for products, brands and more">
+      <button class="go" aria-label="Search" onclick="renderProducts()">🔍</button>
+    </div>
+    <div class="top-actions">
+      <button class="login-btn">Login</button>
+      <a href="#" class="label" onclick="return false;">Become a Seller</a>
+      <button class="cart-btn" onclick="openCart()">
+        🛒 <span class="label">Cart</span>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+  <nav class="cat-strip" id="catStrip"></nav>
+</header>
+
+<section class="banner">
+  <div class="banner-inner">
+    <div class="banner-text">
+      <h1>Mini Bonanza Sale</h1>
+      <p>Up to 80% off on Electronics, Fashion &amp; Home essentials. Prices drop when the clock hits zero.</p>
+    </div>
+    <div class="deal-clock" id="dealClock">
+      <div class="box"><b id="dh">00</b><small>HRS</small></div>
+      <div class="box"><b id="dm">00</b><small>MIN</small></div>
+      <div class="box"><b id="ds">00</b><small>SEC</small></div>
+    </div>
+  </div>
+</section>
+
+<main class="layout">
+  <aside class="filters">
+    <h3>Filters</h3>
+    <div class="filter-group">
+      <h4>Category</h4>
+      <label><input type="radio" name="cat" value="all" checked> All</label>
+      <label><input type="radio" name="cat" value="Electronics"> Electronics</label>
+      <label><input type="radio" name="cat" value="Fashion"> Fashion</label>
+      <label><input type="radio" name="cat" value="Home"> Home &amp; Kitchen</label>
+      <label><input type="radio" name="cat" value="Beauty"> Beauty</label>
+    </div>
+    <div class="filter-group">
+      <h4>Max Price: <span id="priceLabel">₹1,00,000</span></h4>
+      <input class="price-range" id="priceRange" type="range" min="500" max="100000" value="100000" step="500">
+    </div>
+    <div class="filter-group">
+      <h4>Customer Rating</h4>
+      <label><input type="checkbox" id="ratingFilter" value="4"> 4★ &amp; above</label>
+    </div>
+    <div class="filter-group">
+      <h4>Availability</h4>
+      <label><input type="checkbox" id="dealFilter"> Deals only</label>
+    </div>
+    <button class="clear-filters" onclick="clearFilters()">✕ Clear All</button>
+  </aside>
+
+  <section>
+    <div class="results-bar">
+      <span id="result-count"></span>
+      <select id="sortSelect" onchange="renderProducts()">
+        <option value="relevance">Sort: Relevance</option>
+        <option value="price-low">Price -- Low to High</option>
+        <option value="price-high">Price -- High to Low</option>
+        <option value="rating">Rating</option>
+        <option value="discount">Discount</option>
+      </select>
+    </div>
+    <div class="grid" id="productGrid"></div>
+  </section>
+</main>
+
+<footer>
+  <b>FlipMart Mini</b> — a demo storefront built for the joy of shopping carts and JavaScript.<br>
+  Not affiliated with Flipkart®. All product data is illustrative.
+</footer>
+
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <h2 id="cartTitle">My Cart (0)</h2>
+    <button onclick="closeCart()" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-summary" id="cartSummary" style="display:none;">
+    <div class="sum-row"><span>Price (<span id="sumCount"></span> items)</span><span id="sumSubtotal"></span></div>
+    <div class="sum-row savings"><span>Discount</span><span id="sumDiscount"></span></div>
+    <div class="sum-row"><span>Delivery</span><span id="sumDelivery"></span></div>
+    <div class="sum-row total"><span>Total Amount</span><span id="sumTotal"></span></div>
+    <button class="checkout-btn" onclick="checkout()">PLACE ORDER</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
